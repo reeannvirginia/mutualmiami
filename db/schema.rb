@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215201213) do
+ActiveRecord::Schema.define(version: 20171215204431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,11 +40,13 @@ ActiveRecord::Schema.define(version: 20171215201213) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "funds_organizations", id: false, force: :cascade do |t|
-    t.bigint "fund_id"
+  create_table "organization_funds", force: :cascade do |t|
     t.bigint "organization_id"
-    t.index ["fund_id"], name: "index_funds_organizations_on_fund_id"
-    t.index ["organization_id"], name: "index_funds_organizations_on_organization_id"
+    t.bigint "fund_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fund_id"], name: "index_organization_funds_on_fund_id"
+    t.index ["organization_id"], name: "index_organization_funds_on_organization_id"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -59,4 +61,6 @@ ActiveRecord::Schema.define(version: 20171215201213) do
 
   add_foreign_key "donations", "donors"
   add_foreign_key "donations", "funds"
+  add_foreign_key "organization_funds", "funds"
+  add_foreign_key "organization_funds", "organizations"
 end

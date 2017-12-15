@@ -1,3 +1,4 @@
 class Organization < ApplicationRecord
-  has_and_belongs_to_many :funds
+  has_many :organization_funds
+  has_many :funds, through: :organization_funds
 end
