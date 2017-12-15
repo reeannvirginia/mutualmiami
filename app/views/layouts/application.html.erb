@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Changeformiami</title>
+    <title>Change for Miami</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,21 @@
   </head>
 
   <body>
+  <header>
+  	<div class="home-btn">
+  		<%= link_to 'Home', root_url %>	
+  	</div>
+  	<div class="login">
+  		<button>Placeholder</button>
+  	</div>
+  </header>
+
     <%= yield %>
+
+    <footer>
+    	<div class="footer-info">
+    		<p>Copyright 2017 Change for Miami courtesy of students of Wyncode Academy</p>
+    	</div>
+    </footer>
   </body>
 </html>
