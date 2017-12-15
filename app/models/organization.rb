@@ -1,3 +1,3 @@
 class Organization < ApplicationRecord
-  has_many :funds
+  has_and_belongs_to_many :funds
 end
