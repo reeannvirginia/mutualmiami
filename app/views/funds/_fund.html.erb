@@ -1,0 +1,13 @@
+<% @funds.each do |fund| %>
+  <%= fund.category %>
+  <%= link_to 'Learn more', fund %>
+  <%= link_to 'Destroy', fund,
+      method: :delete, data:
+      { confirm: 'Are you sure?' } %>
+  <br>
+  <% fund.organizations.each do |organization| %>
+  <%= organization.name %>
+  <br>
+  <% end %>
+  <br>
+<% end %>
