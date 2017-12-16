@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @fund.category %>
+  <strong>Fund:</strong>
+  <%= @fund.category %><br>
+  <strong>Organizations:</strong> <br>
+  <% @fund.organizations.each do |organization| %>
+    <%= organization.name %>
+      <%= link_to 'Learn more', organization %> <br>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_fund_path(@fund) %> |
