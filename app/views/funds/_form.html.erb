@@ -22,16 +22,14 @@
   </div>
 
   <div class="field">
-    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
+    <%= form.label "All Organizations" %>
+    <%= collection_select(:organizations, :id, @all_organizations, :id, :name, {}, {multiple: true}) %>
   </div>
 
-  <div class="field">
-    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
+    <div class="field">
+    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name, multiple: true) %>
   </div>
 
-  <div class="field">
-    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
