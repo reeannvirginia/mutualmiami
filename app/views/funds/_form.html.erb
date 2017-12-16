@@ -21,13 +21,10 @@
     <%= form.text_field :category, id: :fund_category %>
   </div>
 
+
   <div class="field">
     <%= form.label "All Organizations" %>
-    <%= collection_select(:organizations, :id, @all_organizations, :id, :name, {}, {multiple: true}) %>
-  </div>
-
-    <div class="field">
-    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name, multiple: true) %>
+    <%= collection_select(:organizations, :id, @all_organizations, :id, :name, {}, {class: 'chosen', multiple: true}) %>
   </div>
 
 
