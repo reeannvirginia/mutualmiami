@@ -16,6 +16,23 @@
     <%= form.text_field :category, id: :fund_category %>
   </div>
 
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.text_field :category, id: :fund_category %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select(:organization_id, OrganizationFund.all, :id, :organization_name ) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
