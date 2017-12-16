@@ -25,6 +25,7 @@ body {
 
 .content {
 	flex: 1 0 auto;
+	font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -32,20 +33,52 @@ header {
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 30px;
-	/*height: 400px;*/
+	min-height: 195px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .div-login{
 	margin: 30px 30px;
 }
 
+.home-btn {
+	display: flex;
+	align-items: flex-end;
+}
+
 .home-btn h1 a {
 	text-decoration: none;
+	color: #DBDBDB;
+	font-size: 60px;
+}
+
+.nav {
+	display: flex;
+	align-items: flex-end;
+
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	margin: 12px;
+	font-size: 20px;
+	color: #bab8b8;
+}
+
+.nav ul li a:hover {
+	color: #7e7e7e;
 }
 
 footer {
-	margin-top: 30px;
+	margin-top: 90px;
 	padding: 10px;
-	background-color: green;
-
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #bab8b8;
 }

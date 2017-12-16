@@ -3,6 +3,7 @@
   <head>
     <title>Change for Miami</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
@@ -15,11 +16,17 @@
   <header>
 
   	<div class="home-btn">
-  		<h1><%= link_to 'Home', root_url %></h1>
+  		<h1><%= link_to 'Change for Miami', root_url %></h1>
   	</div>
-  	<div class="login">
-  		<button>Placeholder</button>
+  	<div class="nav">
+      <ul>
+  	 	 <li><%= link_to 'About' %></li>
+       <li><%= link_to 'Organizations'  %></li>
+       <li><%= link_to 'Funds' %></li>
+       <li><%= link_to 'Sign Up' %></li>
+      </ul>
   	</div>
+
   </header>
 
   <div class="content">
@@ -32,7 +39,7 @@
   </div>
     <footer>
     	<div class="footer-info">
-    		<p>Copyright 2017 Change for Miami courtesy of students of Wyncode Academy</p>
+    		<p>Copyright 2017 Change for Miami <br>Courtesy of students of Wyncode Academy</p>
     	</div>
     </footer>
 
