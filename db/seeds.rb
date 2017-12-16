@@ -49,7 +49,7 @@ org3 = Organization.create(
 )
 
 org4 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: education.id,
   name: '100 Black Men of South Florida',
   category: 'Education',
   address: '5825 Sunset Dr Ste. 201 South Miami, FL 33143-5222',
@@ -58,7 +58,7 @@ org4 = Organization.create(
 )
 
 org5 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: education.id,
   name: 'CODEART',
   category: 'Education',
   address: '6440 SW 98TH St. Miami, FL 33156',
@@ -67,7 +67,7 @@ org5 = Organization.create(
 )
 
 org6 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: education.id,
   name: 'Shake-a-Leg Miami',
   category: 'Education',
   address: '2620 S Bayshore Dr Coconut Grove, FL 33133-5424',
@@ -76,7 +76,7 @@ org6 = Organization.create(
 )
 
 org7 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: animals.id,
   name: 'The Cat Network',
   category: 'Animals',
   address: 'PO BOX 347228 Coral Gables, FL 33234-7228',
@@ -85,7 +85,7 @@ org7 = Organization.create(
 )
 
 org8 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: animals.id,
   name: 'Everglades Angels Dog Rescue',
   category: 'Animals',
   address: '2637 E. Atlantic Blvd # 269 Pompano Beach, FL 33062',
@@ -94,7 +94,7 @@ org8 = Organization.create(
 )
 
 org9 = Organization.create(
-  fund_ids: health.id,
+  fund_ids: animals.id,
   name: 'Pet Project for Pets',
   category: 'Animals',
   address: '2200 NW 9th Avenue Wilton Manors, FL 33311',
