@@ -33,6 +33,11 @@ header {
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 30px;
+	/*height: 400px;*/
+}
+
+.div-login{
+	margin: 30px 30px;
 }
 
 .home-btn h1 a {
