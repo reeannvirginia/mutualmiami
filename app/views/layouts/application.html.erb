@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
   <header>
   	<div class="home-btn">
   		<h1><%= link_to 'Home', root_url %></h1>
@@ -17,7 +18,10 @@
   		<button>Placeholder</button>
   	</div>
   </header>
-
+		<!-- ***These are flash messages for the devise gem. -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+		<!-- ***These are flash messages for the devise gem.		 -->
     <%= yield %>
 
     <footer>
@@ -25,5 +29,6 @@
     		<p>Copyright 2017 Change for Miami courtesy of students of Wyncode Academy</p>
     	</div>
     </footer>
+
   </body>
 </html>
