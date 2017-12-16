@@ -10,21 +10,30 @@ class FundsController < ApplicationController
   # GET /funds/1
   # GET /funds/1.json
   def show
+    @organization_fund = @fund.organization_funds
   end
 
   # GET /funds/new
   def new
     @fund = Fund.new
+    get_organizations
   end
 
   # GET /funds/1/edit
   def edit
+    get_organizations
   end
 
   # POST /funds
   # POST /funds.json
   def create
     @fund = Fund.new(fund_params)
+
+    params[:organizations][:id].each do |organization|
+      if !organization.empty?
+        @fund.organization_funds.build(:organization_id => organization)
+    end
+  end
 
     respond_to do |format|
       if @fund.save
@@ -70,5 +79,11 @@ class FundsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fund_params
       params.require(:fund).permit(:category)
+    end
+
+    #utility method
+    def get_organizations
+      @all_organizations = Organization.all
+      @fund_organization = @fund.organization_funds.build
     end
 end

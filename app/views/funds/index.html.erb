@@ -3,12 +3,14 @@
 <h1>Funds</h1>
 
 <% @funds.each do |fund| %>
-<%= fund.category %> <br>
+<%= fund.category %>
+  <%= link_to 'Show', fund %>
+<%= link_to 'Destroy', fund, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br>
   <% fund.organizations.each do |organization| %>
   <%= organization.name %>
-  <%= link_to 'Show', fund %>
-  <%= link_to 'Edit', edit_fund_path(fund) %>
-  <%= link_to 'Destroy', fund, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Show', organization %>
+  <%= link_to 'Edit', edit_organization_path(fund) %>
   <br>
   <% end %>
   <br>
