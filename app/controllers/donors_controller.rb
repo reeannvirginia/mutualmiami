@@ -1,4 +1,5 @@
 class DonorsController < ApplicationController
+  before_action :authenticate_doner!
   before_action :set_donor, only: [:show, :edit, :update, :destroy]
 
   # GET /donors
