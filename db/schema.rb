@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(version: 20171217004719) do
 
   create_table "donations", force: :cascade do |t|
     t.float "amount"
+    t.bigint "donor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "fund_id"
     t.bigint "donor_logins_id"
+    t.index ["donor_id"], name: "index_donations_on_donor_id"
     t.index ["donor_logins_id"], name: "index_donations_on_donor_logins_id"
     t.index ["fund_id"], name: "index_donations_on_fund_id"
   end
@@ -45,6 +47,15 @@ ActiveRecord::Schema.define(version: 20171217004719) do
     t.string "plaid_public_token"
     t.index ["email"], name: "index_donor_logins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_donor_logins_on_reset_password_token", unique: true
+  end
+
+  create_table "donors", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "funds", force: :cascade do |t|
@@ -74,6 +85,7 @@ ActiveRecord::Schema.define(version: 20171217004719) do
   end
 
   add_foreign_key "donations", "donor_logins", column: "donor_logins_id"
+  add_foreign_key "donations", "donors"
   add_foreign_key "donations", "funds"
   add_foreign_key "organization_funds", "funds"
   add_foreign_key "organization_funds", "organizations"
