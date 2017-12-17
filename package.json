@@ -1,5 +1,10 @@
 {
   "name": "changeformiami",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.16.2",
+    "parser": "^0.1.4",
+    "plaid": "^2.2.0"
+  }
 }
