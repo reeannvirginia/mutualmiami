@@ -15,7 +15,12 @@ $( document ).on('turbolinks:load', function() {
       // is enabled.
       $.post('/get_access_token', {
         public_token: public_token,
-      });
+      })
+      .done(function(data){
+        if (data.is_success) {
+          console.log("PUBLICK TOKEN ECHANGED!!")
+        }
+      })
     },
     onExit: function(err, metadata) {
       // The user exited the Link flow.
