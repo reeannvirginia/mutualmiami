@@ -69,6 +69,10 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -99,6 +103,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    plaid (4.0.0)
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
@@ -193,10 +198,12 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   hirb
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg
+  plaid
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
