@@ -18,7 +18,7 @@ $( document ).on('turbolinks:load', function() {
       })
       .done(function(data){
         if (data.is_success) {
-          console.log("PUBLICK TOKEN ECHANGED!!")
+          console.log("PUBLIC TOKEN EXCHANGED!!")
         }
       })
     },

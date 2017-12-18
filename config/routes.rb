@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :organizations
   resources :donors
 
-  post 'get_access_token', to: "funds#get_access_token"
+  post 'get_access_token', to: "donations#get_access_token"
   root "funds#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
