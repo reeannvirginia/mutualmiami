@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171217004719) do
+ActiveRecord::Schema.define(version: 20171217231655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20171217004719) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "fund_id"
-    t.bigint "donor_logins_id"
-    t.index ["donor_logins_id"], name: "index_donations_on_donor_logins_id"
+    t.bigint "donor_login_id"
+    t.index ["donor_login_id"], name: "index_donations_on_donor_login_id"
     t.index ["fund_id"], name: "index_donations_on_fund_id"
   end
 
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20171217004719) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "donations", "donor_logins", column: "donor_logins_id"
+  add_foreign_key "donations", "donor_logins"
   add_foreign_key "donations", "funds"
   add_foreign_key "organization_funds", "funds"
   add_foreign_key "organization_funds", "organizations"
