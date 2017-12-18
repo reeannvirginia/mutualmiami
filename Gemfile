@@ -25,6 +25,8 @@ gem 'plaid'
 
 gem 'devise'
 
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Use CoffeeScript for .coffee assets and views
