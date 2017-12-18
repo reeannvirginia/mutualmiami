@@ -78,6 +78,5 @@ class FundsController < ApplicationController
     #utility method
     def get_organizations
       @all_organizations = Organization.all
-      @fund_organization = @fund.organization_funds.build
     end
 end
