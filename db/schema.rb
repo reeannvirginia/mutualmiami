@@ -75,7 +75,10 @@ ActiveRecord::Schema.define(version: 20171219015053) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "donations", "donor_logins"
+=======
+  add_foreign_key "donations", "donor_logins", column: "donor_logins_id"
+  add_foreign_key "donations", "donors"
+>>>>>>> 84baf02448e2c49a265807c721330463713b7032
   add_foreign_key "donations", "funds"
   add_foreign_key "organization_funds", "funds"
   add_foreign_key "organization_funds", "organizations"
