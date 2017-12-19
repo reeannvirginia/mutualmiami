@@ -1,11 +1,15 @@
 class DonationsController < ApplicationController
-  before_action :set_donation, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_donor_login!
+  before_action :set_donation, only: [:show, :edit, :update, :destroy]
 
   # GET /donations
   # GET /donations.json
   def index
-    @donations = Donation.all
+    if current_donor_login 
+      @donations = current_donor_login.donations
+    else
+      redirect_to donor_login_session_path, notice: "Yo. This isn't you."
+    end 
   end
 
   # GET /donations/1
