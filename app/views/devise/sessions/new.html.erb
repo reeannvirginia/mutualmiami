@@ -1,25 +1,10 @@
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
 
-<div>
-    <div class="card">
-      <div class="card-header">
-        <h2>Log in</h2>
-      </div>
-
-      <style>
-    @import "bootstrap";
-    </style>
-
-    <html>
-
-    <body>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-
-
-
-
-        <div class="container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="container">
 
       <div class="form-group">
         <%= f.label :email %><br />
@@ -43,15 +28,9 @@
       <div class="actions">
         <%= f.submit "Log in", class: 'btn btn-Light' %>
       </div>
-    <% end %>
-  </div>
-
-    <div class="card-header">
-      <%= render "devise/shared/links" %>
     </div>
+  <% end %>
+
+  <div class="card-header">
+    <%= render "devise/shared/links" %>
   </div>
-
-  </body>
-
-  </html>
-</div>
