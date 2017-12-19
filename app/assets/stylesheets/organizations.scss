@@ -10,6 +10,7 @@
 .z-side{
 	background-color: blue;
 }
+
 .z-card-container {
   cursor: pointer;
   height: 300px;
@@ -17,6 +18,7 @@
   position: relative;
   width: 300px;
 }
+
 .z-card {
   height: 100%;
   position: absolute;
@@ -24,9 +26,11 @@
   transition: all 1s ease-in-out;
   width: 100%;
 }
+
 .z-card:hover {
   transform: rotateY(180deg);
 }
+
 .z-card .z-side {
   backface-visibility: hidden;
   border-radius: 6px;
@@ -35,6 +39,7 @@
   overflow: hidden;
   width: 100%;
 }
+
 .z-card .back {
   background: #eaeaed;
   color: #0087cc;
