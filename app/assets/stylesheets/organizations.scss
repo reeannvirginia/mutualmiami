@@ -7,27 +7,27 @@
   margin: 12px 0;
 }*/
 
-.side{
+.z-side{
 	background-color: blue;
 }
-.card-container {
+.z-card-container {
   cursor: pointer;
   height: 300px;
   perspective: 600;
   position: relative;
   width: 300px;
 }
-.card {
+.z-card {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
 }
-.card:hover {
+.z-card:hover {
   transform: rotateY(180deg);
 }
-.card .side {
+.z-card .z-side {
   backface-visibility: hidden;
   border-radius: 6px;
   height: 100%;
@@ -35,7 +35,7 @@
   overflow: hidden;
   width: 100%;
 }
-.card .back {
+.z-card .back {
   background: #eaeaed;
   color: #0087cc;
   line-height: 300px;
