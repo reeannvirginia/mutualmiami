@@ -1,3 +1,54 @@
 // Place all the styles related to the Organizations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*body {
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 12px 0;
+}*/
+
+.z-side{
+	background-color: blue;
+}
+
+.z-card-container {
+  cursor: pointer;
+  height: 600px;
+  perspective: 600;
+  position: relative;
+  width: 350px;
+}
+
+.z-card {
+  height: 100%;
+  position: flex;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+
+}
+
+.z-card:hover {
+  transform: rotateY(180deg);
+}
+
+.z-card .z-side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.z-card .back {
+  background: black/*#eaeaed*/;
+  color: #0087cc;
+  line-height: 300px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+/*.thing {
+  border: 1px solid red;
+}*/
