@@ -105,16 +105,29 @@ org9 = Organization.create(
 p "created #{Organization.count} organizations!"
 
 
-donor_login = 
+samantha_peanuts = 
   DonorLogin.find_by(
     first_name: "Samantha",
     last_name: "Peanuts",
     email: "samantha@peanuts.com"
-    ) or 
+    ) || 
   DonorLogin.create!(
     first_name: "Samantha",
     last_name: "Peanuts",
     email: "samantha@peanuts.com",
+    password: 'PASSWORD',
+  )
+
+peter_segal = 
+  DonorLogin.find_by(
+    first_name: "Peter",
+    last_name: "Segal",
+    email: "peter@segal.com",
+    ) ||
+  DonorLogin.create!(
+    first_name: "Peter",
+    last_name: "Segal",
+    email: "peter@segal.com",
     password: 'PASSWORD',
   )
 
@@ -123,7 +136,18 @@ donor_login =
   donation = Donation.create!(
     amount: (rand * (1-1000) + 1000).round(2), 
     fund: fund,
-    donor_login: donor_login,
+    donor_login: samantha_peanuts,
   )
 end
-p "#{donor_login.first_name} now has #{donor_login.donations.count} donations"
+
+10.times do
+  fund = Fund.all.sample
+  donation = Donation.create!(
+    amount: (rand * (1-1000) + 1000).round(2), 
+    fund: fund,
+    donor_login: peter_segal,
+  )
+end
+
+p "#{samantha_peanuts.first_name} now has #{samantha_peanuts.donations.count} donations"
+p "#{peter_segal.first_name} now has #{peter_segal.donations.count} donations"
