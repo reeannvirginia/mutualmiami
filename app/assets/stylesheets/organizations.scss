@@ -13,18 +13,19 @@
 
 .z-card-container {
   cursor: pointer;
-  height: 300px;
+  height: 600px;
   perspective: 600;
   position: relative;
-  width: 300px;
+  width: 350px;
 }
 
 .z-card {
   height: 100%;
-  position: absolute;
+  position: flex;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
+
 }
 
 .z-card:hover {
@@ -41,9 +42,13 @@
 }
 
 .z-card .back {
-  background: #eaeaed;
+  background: black/*#eaeaed*/;
   color: #0087cc;
   line-height: 300px;
   text-align: center;
   transform: rotateY(180deg);
 }
+
+/*.thing {
+  border: 1px solid red;
+}*/

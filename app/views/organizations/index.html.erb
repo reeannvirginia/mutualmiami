@@ -3,25 +3,33 @@
 
 <h2>Organizations</h2>
 
-<div class="z-card-container">
-  <div class="z-card">
-    <div class="z-side">Hello</div>
-    <div class="z-side back">Info</div>
-  </div>
-</div>
+<!-- <div class="z-card-container"> -->
+  <!-- <div class="z-card"> -->
+    <!-- <div class="z-side">Hello</div> -->
+<!--     <div class="z-side back">Info</div> -->
+  <!-- </div> -->
+<!-- </div> -->
 
     <% @organizations.each do |organization| %>
-        <h3><%= organization.name %></h3>
-        <h4><%= organization.category %></h4>
-        <h5><%= organization.address %></h5>
-        <p><%= organization.description %><p>
-        <h5><%= organization.website %></h5>
-        <%= link_to 'Show', organization %>
-        <%= link_to 'Edit', edit_organization_path(organization) %>
-        <div class="new-organization"><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="z-card-container">
+    <div class="z-card">
+        <div class="z-side">
+            <h3><%= organization.name %></h3>
+            <h4><%= organization.category %></h4>
+            <h5><%= organization.address %></h5>
+            <p><%= organization.description %><p>
+            <h5><%= organization.website %></h5>
+            <%= link_to 'Show', organization %>
+            <%= link_to 'Edit', edit_organization_path(organization) %>
+            <div class="new-organization"><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
         </div>
+            <div class="z-side back">
+                Info
+            </div>
+    </div>
+</div>
     <% end %>
-
 <br>
 
 <%= link_to 'New Organization', new_organization_path %>
