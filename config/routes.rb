@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :donor_logins
+  devise_for :donor_logins, controllers: {registration: "registrations"}
   # devise_for :donors
+  resources :subscribers
   resources :funds
   resources :donations
   resources :organizations
