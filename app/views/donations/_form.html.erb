@@ -16,9 +16,11 @@
     <%= form.text_field :amount, id: :donation_amount %>
   </div>
 
+  <%= form.hidden_field :donor_login_id, value: current_donor_login.id %>
+
   <div class="field">
-    <%= form.label :Donor_id %>
-    <%= form.text_field :Donor_id, id: :donation_Donor_id %>
+    <%= form.label "Select Fund" %>
+    <%= form.collection_select(:fund_id, @funds, :id, :category) %>
   </div>
 
   <div class="actions">
