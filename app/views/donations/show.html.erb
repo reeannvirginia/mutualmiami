@@ -1,12 +1,12 @@
 
 <p>
   <strong>Amount:</strong>
-  <%= @donation.amount %>
+  $<%= sprintf('%.2f', @donation.amount) %>
 </p>
 
 <p>
   <strong>Donor:</strong>
-  <%= @donation.donor_login %>
+  <%= @donation.donor_login.first_name %>
 </p>
 
 <%= link_to 'Edit', edit_donation_path(@donation) %> |
