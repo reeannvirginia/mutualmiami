@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   devise_for :donor_logins
   # devise_for :donors
-<<<<<<< HEAD
-=======
 
->>>>>>> 9dd637bc96f9e8f2acbe6ec5e892b5c2c339eff1
   resources :funds
   resources :donations
   resources :organizations

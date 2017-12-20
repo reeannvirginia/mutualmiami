@@ -29,7 +29,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-header {
+.header {
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
