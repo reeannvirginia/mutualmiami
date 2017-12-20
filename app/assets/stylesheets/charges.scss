@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .background {
-  background-image: url(public/passion.jpg);
+  background-image: url(public/thanks.jpg);
   height: 125vh;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity:  0.5;
 
 }
