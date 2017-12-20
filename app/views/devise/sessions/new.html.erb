@@ -3,8 +3,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
+<div
+class="container-fluid blok"> 
+</div>
+
+</div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="container">
+
+
+      <div class="card-header" style="width: 30rem;">
 
       <div class="form-group">
         <%= f.label :email %><br />
@@ -28,9 +36,11 @@
       <div class="actions">
         <%= f.submit "Log in", class: 'btn btn-Light' %>
       </div>
-    </div>
+
+      <div class="card-footer" style="width: 28rem;">
+        <%= render "devise/shared/links" %>
   <% end %>
 
-  <div class="card-header">
-    <%= render "devise/shared/links" %>
+
+    </div>
   </div>
