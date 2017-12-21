@@ -32,6 +32,7 @@
             </script>
 
 <% end %>
-
-<%= link_to 'Edit', edit_donation_path(@donation) %> |
-<%= link_to 'Back', donations_path %>
+<div class="donationshow btn">
+  <%= link_to 'Edit Donation', edit_donation_path(@donation), class: 'btn btn-secondary' %> |
+  <%= link_to 'Cancel', donations_path, class: 'btn btn-secondary' %>
+</div>

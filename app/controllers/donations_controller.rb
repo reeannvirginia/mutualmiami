@@ -40,10 +40,19 @@ class DonationsController < ApplicationController
   # POST /donations
   # POST /donations.json
   def create
-    @donation = Donation.new(donation_params)
-    get_funds
-    # @donation.save
-    # redirect_to @donation
+    customer = StripeTool.create_customer(email: params[:stripeEmail],
+                                          stripe_token: params[:stripeToken])
+
+    charge = StripeTool.create_charge(customer_id: customer.id,
+                                      amount: (@amount.to_i * 100),
+                                      description: @description)
+
+    @donation = current_donor_login.donations.create!(amount: @amount, fund: nil) # what's the fund
+
+    redirect_to donations_path(donation: donation.id)
+  rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_charge_path(donation_id: @donation.id)
   end
 
   # PATCH/PUT /donations/1

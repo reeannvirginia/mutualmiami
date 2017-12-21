@@ -4,7 +4,6 @@ class ChargesController < ApplicationController
   before_action :set_description
   before_action :authenticate_donor_login!
 
-
   def new
   end
 
@@ -16,11 +15,12 @@ class ChargesController < ApplicationController
                                         amount: (@amount.to_i * 100),
                                         description: @description)
 
-      redirect_to thanks_path(donation_id: @donation.id)
+      redirect_to donations_path(donation_id: @donation.id)
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path(donation_id: @donation.id)
     end
+
 
   def thanks
  end
@@ -28,11 +28,11 @@ class ChargesController < ApplicationController
   private
 
     def amount_to_be_charged
-      @amount = @donation.amount
+      @amount = 500
     end
 
     def set_donation
-      @donation = current_donor_login.donations.find(params[:donation_id])
+      @donation = Donation.new
     end
 
     def set_description

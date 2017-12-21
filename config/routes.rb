@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :charges, only: [:new, :create]
+  resources :charges, only: [:new, :create, :index]
   devise_for :donor_logins
   # devise_for :donors
 

@@ -1,5 +1,27 @@
 <h1>New Donation</h1>
 
-<%= render 'form', donation: @donation %>
+<%= form_tag charges_path(donation_id: @donation.id) do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span> <%= pretty_amount(@amount) %></span>
+    </label>
+  </article>
 
-<%= link_to 'Back', donations_path %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="<%= @description %>"
+            data-amount="500"
+            data-email="<%= current_donor_login.email %>"
+            data-bitcoin="true"
+            data-locale="auto">
+            data-bitcoin="true">
+            </script>
+
+<% end %>
+
+<%= link_to 'Cancel', donations_path %>
