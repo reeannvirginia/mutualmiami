@@ -1,46 +1,74 @@
+.sessions_new {
+  background: url('public/ldb-march-start-investing-500-01.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
-
-body {
-  font-weight: 400;
-  text-decoration-color: #212529;
-  text-align: left;
-
-}
-
-.container img {
-  background: url(images/bg.jpg) no-repeat center center fixed;
+.registrationss_new {
+    background: url('public/ldb-march-start-investing-500-01.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+    }
+
+.registrationss_new {
+  background: url('public/ldb-march-start-investing-500-01.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+.passwords_new {
+  background: url('public/ldb-march-start-investing-500-01.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+.passwords_new {
+  background: url('public/ldb-march-start-investing-500-01.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+
+.container {
+  padding: 25px;
+  opacity: 1;
+  }
+
 
 .content{
- align-self: left;
- font-size: 20px;
-
-}
+   align-self: left;
+   font-size: 20px;
+  }
 
 .card-header {
-  background: linear-gradient(to right, rgba(64,224,208,1), rgba(255,165,0,1));
+  background-color: rgba(245, 245, 245, 0.4) !important;
   width:300px;
   height: 100%;
-  opacity: 0.9;
+  opacity: 1;
   margin-left:auto;
   margin-right:auto;
-  font-family: "Times New Roman", Georgia, Serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
   box-shadow: 10px 10px 5px grey;
-
-
 }
 
 .card-footer {
-  background: linear-gradient(to right, rgba(64,224,208,1), rgba(255,165,0,1));
+  background-color: rgba(245, 245, 245, 0.4);
   width:300px;
   height: 100%;
-  opacity: 0.9;
+  opacity: 1;
   margin-left:auto;
   margin-right:auto;
-  font-family: "Times New Roman", Georgia, Serif;
-
+  font-family: 'Open Sans', sans-serif;
+ font-size: 15px;
 }
