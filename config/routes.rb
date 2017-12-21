@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :donors
 
 
-get 'thanks', to: 'charges#thanks', as: 'thanks'
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
 
  root to: 'funds#index'
 

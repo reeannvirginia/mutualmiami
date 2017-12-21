@@ -49,7 +49,7 @@ class DonationsController < ApplicationController
 
     @donation = current_donor_login.donations.create!(amount: @amount, fund: nil) # what's the fund
 
-    redirect_to donations_path(donation: donation.id)
+    redirect_to thanks_path(donation: donation.id)
   rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path(donation_id: @donation.id)
