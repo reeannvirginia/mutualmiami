@@ -1,14 +1,8 @@
-<head>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</head>
-
-<div
-class="container-fluid blok"> 
-</div>
-
 </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="sessions_new">
+
     <div class="container">
 
 
@@ -23,7 +17,6 @@ class="container-fluid blok">
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
       </div>
-
 
 
       <% if devise_mapping.rememberable? -%>
