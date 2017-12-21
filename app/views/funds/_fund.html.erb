@@ -1,9 +1,9 @@
-<div class="big-container">
+<div class="z-big-container">
     <% @funds.each do |fund| %>
-<div class="card-container">
+<div class="z-card-container">
 
-  <div class="card">
-    <div class="side">
+  <div class="z-card">
+    <div class="z-side">
      <%= fund.category %>
           <%# link_to 'Learn more', fund %>
      <%# link_to 'Destroy', fund,
@@ -13,7 +13,7 @@
      <%# organization.name %>
      <%# end %>
      </div>
-    <div class="side back">
+    <div class="z-side back">
            <% fund.organizations.each do |organization| %>
      <%= organization.name %> <br>
      <% end %>

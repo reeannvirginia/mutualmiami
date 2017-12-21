@@ -3,52 +3,51 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .main-holder {
-  margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-color: #687DD8;
   /*display: flex;*/
   text-align: center;
   /*position: relative;*/
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 .main-holder-text {
-  
+  /*margin: 20px;*/
+  padding: 50px;
 }
 
-.main-holder-pics {
- 
+.funds-container {
+  background-color: rgb(223, 223, 223);
+  /*text-align: center;*/
+  padding-top: 14%;
+  margin-top: -9%;
+
+  h1 {
+    padding: 50px 0 31px 82px;;
+  }
+
+  p {
+    padding: 33px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80%;
+  }
 }
 
-.placeholder {
-}
 
 
 
+/* CSS for the flipping cards */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.big-container {
+.z-big-container {
   display: flex;
+  margin-bottom: -122px;
 }
 
-.card-container {
+.z-card-container {
   cursor: pointer;
   height: 600px;
   perspective: 600;
@@ -56,25 +55,26 @@
   width: 350px;
   margin: 80px;
 }
-.card {
+.z-card {
   height: 100%;
   position: flex;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
 }
-.card:hover {
+.z-card:hover {
   transform: rotateY(180deg);
 }
-.card .side {
+.z-card .z-side {
   backface-visibility: hidden;
+  background-color: pink;
   border-radius: 6px;
   height: 100%;
   position: absolute;
   overflow: hidden;
   width: 100%;
 }
-.card .back {
+.z-card .back {
   background: #eaeaed;
   color: #0087cc;
   line-height: 150px;
