@@ -5,11 +5,11 @@ class DonationsController < ApplicationController
   # GET /donations
   # GET /donations.json
   def index
-    if current_donor_login 
+    if current_donor_login
       @donations = current_donor_login.donations
     else
       redirect_to donor_login_session_path, notice: "Yo. This isn't you."
-    end 
+    end
   end
 
   # GET /donations/1
@@ -42,16 +42,8 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(donation_params)
     get_funds
-
-    respond_to do |format|
-      if @donation.save
-        format.html { redirect_to @donation, notice: 'Donation was successfully created.' }
-        format.json { render :show, status: :created, location: @donation }
-      else
-        format.html { render :new }
-        format.json { render json: @donation.errors, status: :unprocessable_entity }
-      end
-    end
+    @donation.save
+    redirect_to @donation
   end
 
   # PATCH/PUT /donations/1

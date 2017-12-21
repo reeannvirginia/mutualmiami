@@ -8,7 +8,8 @@
     <%= organization.name %>
       <%= link_to 'Learn more', organization %> <br>
   <% end %>
+  <div class="donation btn">
+  <%= link_to 'Donate to fund', new_donation_path, class: 'btn btn-primary' %>
 </p>
 
-<%= link_to 'Edit', edit_fund_path(@fund) %> |
 <%= link_to 'Back', funds_path %>
