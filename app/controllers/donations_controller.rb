@@ -8,7 +8,7 @@ class DonationsController < ApplicationController
     if current_donor_login
       @donations = current_donor_login.donations
     else
-      redirect_to donor_login_session_path, notice: "Yo. This isn't you."
+      redirect_to donor_login_session_path, notice: "This isn't you."
     end
   end
 
@@ -42,8 +42,8 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(donation_params)
     get_funds
-    @donation.save
-    redirect_to @donation
+    # @donation.save
+    # redirect_to @donation
   end
 
   # PATCH/PUT /donations/1

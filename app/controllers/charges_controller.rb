@@ -36,7 +36,7 @@ class ChargesController < ApplicationController
     end
 
     def set_description
-      @description = "Some amazing product"
+      @description = "A generous donation!"
     end
 
 end

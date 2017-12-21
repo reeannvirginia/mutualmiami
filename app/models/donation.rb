@@ -3,5 +3,5 @@ class Donation < ApplicationRecord
   belongs_to :fund
 
   validates :amount, presence: true
-  validates_numericality_of :amount
+  validates_numericality_of :amount, :on => :create
 end
