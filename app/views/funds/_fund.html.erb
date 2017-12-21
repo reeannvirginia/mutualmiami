@@ -1,13 +1,25 @@
-<% @funds.each do |fund| %>
-  <%= fund.category %>
-  <%= link_to 'Learn more', fund %>
-  <%= link_to 'Destroy', fund,
-      method: :delete, data:
-      { confirm: 'Are you sure?' } %>
-  <br>
-  <% fund.organizations.each do |organization| %>
-  <%= organization.name %>
-  <br>
-  <% end %>
-  <br>
-<% end %>
+<div class="big-container">
+    <% @funds.each do |fund| %>
+<div class="card-container">
+
+  <div class="card">
+    <div class="side">
+     <%= fund.category %>
+          <%# link_to 'Learn more', fund %>
+     <%# link_to 'Destroy', fund,
+     method: :delete, data:
+     { confirm: 'Are you sure?' } %>
+     <%# fund.organizations.each do |organization| %>
+     <%# organization.name %>
+     <%# end %>
+     </div>
+    <div class="side back">
+           <% fund.organizations.each do |organization| %>
+     <%= organization.name %> <br>
+     <% end %>
+   </div>
+    </div>
+ </div>
+     <% end %>
+
+</div>
