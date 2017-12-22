@@ -15,6 +15,7 @@ class ChargesController < ApplicationController
                                         amount: (@amount.to_i * 100),
                                         description: @description)
 
+
       redirect_to donations_path(donation_id: @donation.id)
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -31,7 +32,7 @@ class ChargesController < ApplicationController
   private
 
     def amount_to_be_charged
-      @amount = 500
+      @amount =
     end
 
     def set_donation
