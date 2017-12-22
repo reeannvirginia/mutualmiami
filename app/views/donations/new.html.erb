@@ -1,5 +1,47 @@
 <h1>New Donation</h1>
 
-<%= render 'form', donation: @donation %>
 
-<%= link_to 'Back', donations_path %>
+<%= form_tag donations_path() do %>
+<div class="container">
+  <div class="form-group">
+    <%= label_tag :amount %>
+    <%= text_field_tag "donation[amount]" %>
+  </div>
+
+  <%= hidden_field_tag "donation[donor_login_id]", current_donor_login.id %>
+
+  <div class="form-group">
+    <%= label_tag "Select Fund" %>
+    <%= select_tag "donation[fund_id]", options_from_collection_for_select(@funds, "id", "category") %>
+  </div>
+
+
+  <article>
+    <% if flash[:error].present? %>
+    <div id="error_explanation">
+      <p><%= flash[:error] %></p>
+    </div>
+    <% end %>
+    <label class="amount">
+      <span> <%= pretty_amount(@amount) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-description="<%= @description %>"
+  data-amount="500"
+  data-email="<%= current_donor_login.email %>"
+  data-bitcoin="true"
+  data-locale="auto">
+  data-bitcoin="true">
+  </script>
+
+  <% end %>
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+  <%= hidden_field_tag 'stripeToken' %>
+  <%= hidden_field_tag 'stripeEmail' %>
+
+  <%= link_to 'Cancel', donations_path %>

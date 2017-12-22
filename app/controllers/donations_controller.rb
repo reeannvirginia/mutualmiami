@@ -5,11 +5,11 @@ class DonationsController < ApplicationController
   # GET /donations
   # GET /donations.json
   def index
-    if current_donor_login 
+    if current_donor_login
       @donations = current_donor_login.donations
     else
-      redirect_to donor_login_session_path, notice: "Yo. This isn't you."
-    end 
+      redirect_to donor_login_session_path, notice: "This isn't you."
+    end
   end
 
   # GET /donations/1
@@ -41,17 +41,20 @@ class DonationsController < ApplicationController
   # POST /donations.json
   def create
     @donation = Donation.new(donation_params)
-    get_funds
+    @donation.save!
+    # @donation = current_donor_login.donations.create!(amount: @amount, fund: nil)
+    customer = StripeTool.create_customer(email: params[:stripeEmail],
+      stripe_token: params[:stripeToken])
 
-    respond_to do |format|
-      if @donation.save
-        format.html { redirect_to @donation, notice: 'Donation was successfully created.' }
-        format.json { render :show, status: :created, location: @donation }
-      else
-        format.html { render :new }
-        format.json { render json: @donation.errors, status: :unprocessable_entity }
-      end
-    end
+      charge = StripeTool.create_charge(customer_id: customer.id,
+        amount: 500,
+        description: "Donation totaling #{@donation.amount}")
+
+        redirect_to donations_path(donation_id: @donation.id)
+      rescue Stripe::CardError => e
+        flash[:error] = e.message
+        redirect_to new_charge_path(donation_id: @donation.id)
+
   end
 
   # PATCH/PUT /donations/1
@@ -92,4 +95,7 @@ class DonationsController < ApplicationController
     def get_funds
       @funds = Fund.all
     end
+
+
+
 end

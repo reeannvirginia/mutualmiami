@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount, id: :donation_amount %>
-  </div>
+<div class="container-fluid blok">
+    <div class="container">
+        <div class="form-group">
+        <%= form.label :amount %>
+        <%= form.text_field :amount, id: :donation_amount, class: 'form-control', placeholder: 'Enter amount' %>
+      </div>
 
-  <%= form.hidden_field :donor_login_id, value: current_donor_login.id %>
+      <%= form.hidden_field :donor_login_id, value: current_donor_login.id %>
 
-  <div class="field">
-    <%= form.label "Select Fund" %>
-    <%= form.collection_select(:fund_id, @funds, :id, :category) %>
-  </div>
+      <div class="form-group">
+        <%= form.label "Select Fund" %>
+        <%= form.collection_select(:fund_id, @funds, :id, :category) %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="actions">
+        <%= form.submit%>
+      </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>

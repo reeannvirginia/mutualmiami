@@ -2,5 +2,8 @@
 
 <%= render 'form', donation: @donation %>
 
-<%= link_to 'Show', @donation %> |
-<%= link_to 'Back', donations_path %>
+
+<div class='donationedit btn'>
+  <%= link_to 'Show', @donation, class: 'btn btn-secondary' %> |
+  <%= link_to 'Cancel', donations_path, class: 'btn btn-secondary' %>
+</div>
