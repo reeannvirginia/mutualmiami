@@ -28,12 +28,20 @@
 
 .funds-text {
     margin-left: 10%;
+    /*float: left;*/
 
     p {
     padding-top: 33px;
+    margin-right: 30px;
     text-align: left;
     max-width: 57%;
+    display: inline-block;
     }
+}
+
+.funds-text img {
+  margin: 0 0 50px 65px;
+  /*padding: 30px;*/
 }
 
 .create-fund a {
