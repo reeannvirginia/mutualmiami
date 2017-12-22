@@ -12,11 +12,16 @@
      <%# fund.organizations.each do |organization| %>
      <%# organization.name %>
      <%# end %>
-     </div>
+    </div>
     <div class="z-side back">
-           <% fund.organizations.each do |organization| %>
-     <%= organization.name %> <br>
-     <% end %>
+      <div class="donate-link">
+        <%= link_to 'Donate', new_donation_path %>
+      </div>
+      <div class="org-names">
+      <% fund.organizations.each do |organization| %>
+        <%= organization.name %> <br>
+      <% end %>
+      </div>
    </div>
     </div>
  </div>
