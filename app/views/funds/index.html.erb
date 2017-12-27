@@ -1,27 +1,29 @@
 <div class="main-holder">
   <div class="main-holder-text">
-    <h3>Some Inspiring Text</h3>
-    <h4>Some More Inspiring Text</h4>
+    <h4>A mutual approach to donations</h4>
+    <h3>One coin at a time</h3>
   </div>
 
   <div class="main-holder-pics">
-    <img class="placeholder" src="http://via.placeholder.com/350x300" alt="placeholder">
-    <img src="http://via.placeholder.com/350x350" alt="placeholder">
-    <img class="placeholder" src="http://via.placeholder.com/350x300" alt="placeholder">
+  <%= image_tag ("public/ashton-bingham-113943.jpg"), width: "350", height: "275" %>
+    <!-- <img class="placeholder" src="http://via.placeholder.com/350x300" alt="placeholder"> -->
+    <%= image_tag ("public/gus-moretta-371897.jpg"), width: "350", height: "325" %>
+   <!--  <img src="http://via.placeholder.com/350x350" alt="placeholder"> -->
+   <%= image_tag ("public/nathaniel-tetteh-300252.jpg"), width: "350", height: "275" %>
+    <!-- <img class="placeholder" src="http://via.placeholder.com/350x300" alt="placeholder"> -->
   </div>
 </div>
 
 <div class="funds-container">
     <div class="funds-text">  
       <h1>Funds</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>While looking at the advantages of using Change for Miami the biggest one is simplicity. We’ve streamlined the process of donating with the objective of making the most change with a few clicks. Those few clicks can make a world of difference, your fund could include animal nonprofits like dog rescue or the cat network that help efforts for animals to be placed in loving homes or treat them medically. <br><br>
 
-      <img src="http://via.placeholder.com/350x250" alt="placeholder">
+      Deciding where to donate can be difficult to do and not all non-profits are created equally. Here at Change for Miami we encourage individual donors to contribute locally, while maximizing their donation amount regardless of its’ size.
+      </p>
+
+      <%= image_tag ("public/john-mark-kuznietsov-219066.jpg"), width: "350", height: "250" %>
+      <!-- <img src="http://via.placeholder.com/350x250" alt="placeholder"> -->
       
       <div class="create-fund"> <%= link_to 'Create New Fund', new_fund_path %>
       </div>

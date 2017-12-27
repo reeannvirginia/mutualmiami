@@ -21,6 +21,10 @@
   padding: 50px;
 }
 
+.main-holder-pics img {
+  box-shadow: 0px 0px 20px 3px;
+}
+
 .funds-container {
   background-color: rgb(223, 223, 223);
   /*clip-path: polygon(0 10.9%, 100% 0, 100% 100%, 0 100%);*/
@@ -44,6 +48,7 @@
 
 .funds-text img {
   margin: 0 0 50px 65px;
+  box-shadow: 0px 0px 20px 3px;
   /*padding: 30px;*/
 }
 
@@ -93,20 +98,28 @@
 }
 .z-card .z-side {
   backface-visibility: hidden;
-  background-color: #EAC4D5;
+  background-image: linear-gradient(to right bottom, rgba(193, 247, 220, 0.9), rgba(234, 196, 213, 0.9));
   /*border-radius: 6px;*/
   height: 100%;
   position: absolute;
   overflow: hidden;
   width: 100%;
   box-shadow: 1px 2px 4px 0px #888888;
+  text-align: center;
+
+  h4 {
+    padding: 125px 0;
+    color: #515350;
+  }
 }
+
 .z-card .back {
   background: #eaeaed;
   color: #0087cc;
   /*line-height: 150px;*/
   text-align: center;
   transform: rotateY(180deg);
+  padding: 0 5px;
 }
 
 .donate-link {
