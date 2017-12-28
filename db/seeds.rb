@@ -107,15 +107,30 @@ org9 = Organization.create!(
   website: 'http://www.thepetprojectfl.org'
 )
 
+org10 = Organization.create!(
+  name: "American Children's Orchestra for Peace",
+  category: 'Arts, Culture & Humanities',
+  address: '2150 Coral Way Suite 3-C, Miami, FL 33145',
+  description: "American Children's Orchestras for Peace's mission is to create for our children, through music, an environment free of violence.",
+  website: 'http://www.americanchildrensorchestras.org'
+)
+
+org11 = Organization.create!(
+  name: "Arts & Business Council of Miami",
+  category: 'Arts, Culture & Humanities',
+  address: '1637 SW 8th Street, Ste 212, Miami, FL 33135',
+  description: "The Arts & Business Council of Miami is leading the movement to build a sustainable cultural community through advancing high-impact partnerships between business, foundations and the arts. Through research, training and arts engagement, ABC serves as an effective catalyst for building synergistic partnerships that give business a competitive advantage. As Miami's official association to leverage the arts for economic vitality, ABC provides meaningful engagement opportunities with the arts to inspire employees, stimulate innovation and foster creativity.",
+  website: 'http://www.artsbizmiami.org'
+)
 p "created #{Organization.count} organizations!"
 
 
-samantha_peanuts = 
+samantha_peanuts =
   DonorLogin.find_by(
     first_name: "Samantha",
     last_name: "Peanuts",
     email: "samantha@peanuts.com"
-    ) || 
+    ) ||
   DonorLogin.create!(
     first_name: "Samantha",
     last_name: "Peanuts",
@@ -123,7 +138,7 @@ samantha_peanuts =
     password: 'PASSWORD',
   )
 
-peter_segal = 
+peter_segal =
   DonorLogin.find_by(
     first_name: "Peter",
     last_name: "Segal",
@@ -139,7 +154,7 @@ peter_segal =
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand * (1-1000) + 1000).round(2), 
+    amount: (rand * (1-1000) + 1000).round(2),
     fund: fund,
     donor_login: samantha_peanuts,
   )
@@ -148,7 +163,7 @@ end
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand * (1-1000) + 1000).round(2), 
+    amount: (rand * (1-1000) + 1000).round(2),
     fund: fund,
     donor_login: peter_segal,
   )
