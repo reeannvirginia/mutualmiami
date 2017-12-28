@@ -47,7 +47,7 @@ class DonationsController < ApplicationController
       stripe_token: params[:stripeToken])
 
       charge = StripeTool.create_charge(customer_id: customer.id,
-        amount: 500,
+        amount: @amount,
         description: "Donation totaling #{@donation.amount}")
 
         redirect_to donations_path(donation_id: @donation.id)
