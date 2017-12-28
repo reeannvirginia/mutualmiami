@@ -11,7 +11,7 @@ class SubscribersController < ApplicationController
 
     customer = Stripe::Customer.create(
       card: token,
-      plan: 011198,
+      plan: '011198',
       email: current_user.emil
     )
 
@@ -19,6 +19,6 @@ class SubscribersController < ApplicationController
       current_user.stripeid = customerid
 
       redirect_to projects_path
-      
+
     end
 end
