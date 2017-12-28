@@ -7,6 +7,7 @@ class DonationsController < ApplicationController
   def index
     if current_donor_login
       @donations = current_donor_login.donations
+      @donor = current_donor_login.first_name
     else
       redirect_to donor_login_session_path, notice: "This isn't you."
     end
@@ -26,15 +27,6 @@ class DonationsController < ApplicationController
   # GET /donations/1/edit
   def edit
     get_funds
-  end
-
-  def get_access_token
-    current_donor_login.plaid_public_token = params[:public_token]
-    current_donor_login.plaid_access_token = PLAID_CLIENT.item.public_token.exchange(params[:public_token])
-    current_donor_login.save
-    respond_to do |format|
-      format.json { render json: {is_success: true}}
-    end
   end
 
   # POST /donations

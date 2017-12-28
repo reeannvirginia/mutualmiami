@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :charges, only: [:new, :create, :index]
-  devise_for :donor_logins
+  devise_for :donor_logins, controllers: { registrations: 'donor_logins' }
   # devise_for :donors
 
   resources :funds
