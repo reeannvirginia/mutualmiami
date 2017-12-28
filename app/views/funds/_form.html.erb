@@ -1,3 +1,5 @@
+
+<div class="new-fund-form">
 <%= form_with(model: fund, local: true) do |form| %>
   <% if fund.errors.any? %>
     <div id="error_explanation">
@@ -25,3 +27,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
