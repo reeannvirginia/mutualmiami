@@ -62,9 +62,21 @@
     text-align: center;
     display: inline-block;
     font-size: 16px;
+    border-radius: 4px;
 }
 
-
+.z-btn2 a {
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #DB5461;
+    border: none;
+    color: white;
+    padding: 15px 21px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
 
 /* CSS for the flipping cards */
 
@@ -165,3 +177,8 @@
     padding: 20px 0;
   }
 }
+
+.donation .btn {
+  float: right;
+}
+
