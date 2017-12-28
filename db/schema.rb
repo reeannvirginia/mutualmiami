@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219015053) do
+ActiveRecord::Schema.define(version: 20171228210934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20171219015053) do
     t.string "plaid_public_token"
     t.boolean "subscribed"
     t.string "stripeid"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_donor_logins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_donor_logins_on_reset_password_token", unique: true
   end

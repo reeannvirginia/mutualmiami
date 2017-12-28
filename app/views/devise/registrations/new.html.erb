@@ -2,8 +2,7 @@
 <style>
 @import "bootstrap";
 </style>
-=======
-</div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -14,6 +13,10 @@
     <h1>Sign up</h1>
 
   <div class="card-header" style="width: 30rem;">
+
+  <div class="field">
+    <%= f.file_field :avatar %>
+  </div>
 
   <div class="field">
     <%= f.label :first_name %><br />

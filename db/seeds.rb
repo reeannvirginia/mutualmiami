@@ -122,7 +122,16 @@ org11 = Organization.create!(
   description: "The Arts & Business Council of Miami is leading the movement to build a sustainable cultural community through advancing high-impact partnerships between business, foundations and the arts. Through research, training and arts engagement, ABC serves as an effective catalyst for building synergistic partnerships that give business a competitive advantage. As Miami's official association to leverage the arts for economic vitality, ABC provides meaningful engagement opportunities with the arts to inspire employees, stimulate innovation and foster creativity.",
   website: 'http://www.artsbizmiami.org'
 )
+
+org12 = Organization.create!(
+  name: "Heroes Unite, Inc.",
+  category: 'Arts, Culture & Humanities',
+  address: '14703 west dixie highway, Miami, FL 33181',
+  description: "Heroes Unite produces culturally diverse artistic projects, programs and events providing opportunities which nurture and empower individuals and communities. With the arts at our core, we utilize creative collaborations, mentoring, volunteerism and leadership. Our participants and productions enrich society with shared values, goals and outcomes. Vision: Art and culture has, and always will, support the evolutionary ascension of individuals and the societies in which they live and work. Heroes Unite is dedicated to providing grass root movements to target populations in need of opportunity and direction. Our programs are transformative and have the potential to be replicated on a National level.",
+  website: 'http://www.heroesunite.org'
+)
 p "created #{Organization.count} organizations!"
+
 
 
 samantha_peanuts =
@@ -139,14 +148,15 @@ samantha_peanuts =
   )
 
 peter_segal =
-  DonorLogin.find_by(
-    first_name: "Peter",
-    last_name: "Segal",
-    email: "peter@segal.com",
-    ) ||
+    DonorLogin.find_by(
+      first_name: "Peter",
+      last_name: "Segal",
+      email: "peter@segal.com"
+      ) ||
   DonorLogin.create!(
     first_name: "Peter",
     last_name: "Segal",
+    avatar: File.open("#{Rails.root}/public/images/peter_segal.jpg"),
     email: "peter@segal.com",
     password: 'PASSWORD',
   )
@@ -154,7 +164,7 @@ peter_segal =
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand * (1-1000) + 1000).round(2),
+    amount: (rand(1..100)).round(2),
     fund: fund,
     donor_login: samantha_peanuts,
   )
@@ -163,7 +173,7 @@ end
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand * (1-1000) + 1000).round(2),
+    amount: (rand(1..100)).round(2),
     fund: fund,
     donor_login: peter_segal,
   )
