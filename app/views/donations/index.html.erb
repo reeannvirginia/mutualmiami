@@ -22,9 +22,12 @@
         <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <tr><%= @donations.count%></tr>
   </tbody>
 </table>
 
 <br>
+
+
 
 <%= link_to 'New Donation', new_donation_path %>
