@@ -28,15 +28,6 @@ class DonationsController < ApplicationController
     get_funds
   end
 
-  def get_access_token
-    current_donor_login.plaid_public_token = params[:public_token]
-    current_donor_login.plaid_access_token = PLAID_CLIENT.item.public_token.exchange(params[:public_token])
-    current_donor_login.save
-    respond_to do |format|
-      format.json { render json: {is_success: true}}
-    end
-  end
-
   # POST /donations
   # POST /donations.json
   def create

@@ -21,8 +21,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'hirb'
 
-gem 'plaid'
-
 gem 'devise'
 
 gem 'stripe'
