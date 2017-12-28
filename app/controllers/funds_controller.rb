@@ -1,4 +1,5 @@
 class FundsController < ApplicationController
+  before_action :authenticate_donor_login!, only: [:create, :edit, :update, :destroy]
   before_action :set_fund, only: [:show, :edit, :update, :destroy]
 
   # GET /funds
