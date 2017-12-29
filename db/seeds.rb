@@ -130,6 +130,102 @@ org12 = Organization.create!(
   description: "Heroes Unite produces culturally diverse artistic projects, programs and events providing opportunities which nurture and empower individuals and communities. With the arts at our core, we utilize creative collaborations, mentoring, volunteerism and leadership. Our participants and productions enrich society with shared values, goals and outcomes. Vision: Art and culture has, and always will, support the evolutionary ascension of individuals and the societies in which they live and work. Heroes Unite is dedicated to providing grass root movements to target populations in need of opportunity and direction. Our programs are transformative and have the potential to be replicated on a National level.",
   website: 'http://www.heroesunite.org'
 )
+
+org13 = Organization.create!(
+  name: "Miami Waterkeeper",
+  category: 'Environment & Public Spaces',
+  address: '2103 Coral Way, 2nd Floor, Miami, FL 33145',
+  description: "Miami Waterkeeper (formerly Biscayne Bay Waterkeeper) is a non-profit organization that advocates for South Florida's watershed and wildlife. Our goal is to educate locals and visitors about the vital role of clean water in Miami's clean water economy, and to empower them to take an active role in community decision making. We hope to ensure a vibrant coastal culture and ecosystem for generations to come. Launched in 2011, MWK is the first Waterkeeper in South Florida and the only advocacy organization solely dedicated to protecting Biscayne Bay and its surrounding watershed.",
+  website: 'http://miamiwaterkeeper.org'
+)
+
+org14 = Organization.create!(
+  name: "Everglades Law Center",
+  category: 'Environment & Public Spaces',
+  address: '331 W. Central Ave. Ste. 213, Winter Haven, FL 33880',
+  description: "The Everglades Law Center is a nonprofit public interest law firm dedicated to preserving the natural landscape of Florida. We advocate, negotiate, and when necessary, litigate to protect Florida's special places.",
+  website: 'http://www.evergladeslaw.org'
+)
+
+org15 = Organization.create!(
+  name: "Miami Beach Botanical Garden",
+  category: 'Environment & Public Spaces',
+  address: '2000 Convention Center Dr, Miami Beach, FL 33139-1806',
+  description: "Miami Beach Botanical Garden's mission is to provide free public access to a subtropical botanical oasis. We offer environmental programs for all ages, preserve a habitat for native plants and pollinators, and provide visitors with a peaceful place to relish in nature. Our year round calendar of cultural programs inspires the artist in all of us, from music, visual arts and performances. Visitors come from around the world and around the block.",
+  website: 'http://www.mbgarden.org'
+)
+
+org15 = Organization.create!(
+  name: "Surfrider Foundation Miami Chapter",
+  category: 'Environment & Public Spaces',
+  address: '12800 Old Cutler Rd, Pinecrest, FL 33156',
+  description: "The Surfrider Foundation is dedicated to the protection and enjoyment of the world's ocean, waves and beaches through a powerful activist network. The Miami Chapter programs include: - Rise Above Plastics is designed to eliminate the impacts of plastics in the marine environment by raising awareness about the dangers of plastic pollution and by advocating for a reduction of single-use plastics and the recycling of all plastics. - Dune Restorations - restore local beach dunes as closely as possible to original native/natural state to create a nicer beach environment and strong natural buffer from storm surge & tropical weather events. - Blue Water Task Force - regular testing of local beach water for bacteria levels using rigid scientific protocols. Negative readings are reporting broadly to public, media and government so that source polluters are identified and the problems addressed. CLEAN WATER = HEALTHY BEACHES",
+  website: 'https://miami.surfrider.org/'
+)
+
+org16 = Organization.create!(
+  name: "Make Miami Makerspace",
+  category: 'Science & Technology',
+  address: '8347 NW 54 Street, Doral, FL 33166',
+  description: "MakeMIA Makerspace strives to create a community in which every member is a creator, student, and teacher by providing infrastructure and resources to facilitate engagement and collaboration on diverse projects. We promote education in science, technology, engineering, art and math (STEAM) through hands-on experience.",
+  website: 'http://www.makemia.com'
+)
+
+org17 = Organization.create!(
+  name: "Refresh Miami",
+  category: 'Science & Technology',
+  address: '1040 NE 85 Street, Miami, FL 33138',
+  description: "To educate, inspire and grow South Florida's tech and startup community. Each month, we bring together hundreds of technology professionals and entrepreneurs to learn from industry innovators and pioneers, while also connecting with other like-minded individuals. We also host ongoing workshops to provide the community with the latest skills needed to be competitive in today's workforce. Quite simply, we are the hub of Miami Tech.",
+  website: 'http://www.refreshmiami.com'
+)
+
+org18 = Organization.create!(
+  name: "Philip and Patricia Frost Museum of Science",
+  category: 'Science & Technology',
+  address: '1101 Biscayne Blvd, Miami, FL 33132',
+  description: "Frost Science inspires and connects people of all ages and backgrounds to enjoy science and technology, to better understand ourselves and our world.",
+  website: 'http://www.frostscience.org'
+)
+
+org19 = Organization.create!(
+  name: "Bots for All",
+  category: 'Science & Technology',
+  address: '89 Corydon Drive, Miami Springs, FL 33166',
+  description: "Expose interested students and parents in traditionally under-served areas to engineering and related technology careers.",
+  website: 'http://www.botsforall.org'
+)
+
+org20 = Organization.create!(
+  name: "Accion in Miami",
+  category: 'Housing & Affordability',
+  address: '2828 Coral Way, Suite 200, Coral Gables, FL 33145',
+  description: "Accion's mission is to empower low- to moderate-income business owners through access to capital and financial education. With economic opportunity, these entrepreneurs - often minorities and women - can build assets, better provide for their families, create employment and strengthen their communities.",
+  website: 'https://us.accion.org/'
+)
+
+org21 = Organization.create!(
+  name: "Miami Habitat",
+  category: 'Housing & Affordability',
+  address: '3800 NW 22 Avenue, Miami, FL 33142-5318',
+  description: "Habitat for Humanity of Greater Miami is an ecumenical ministry that transforms lives and communities by providing low-income families with an opportunity to help build and then purchase an affordable home.",
+  website: 'http://www.miamihabitat.org'
+)
+
+org22 = Organization.create!(
+  name: "Favela Miami",
+  category: 'Housing & Affordability',
+  address: '1441 Lincoln Rd., Ste. 201, Miami Beach, FL 33139',
+  description: "Our mission at Favela Miami is to assist the Homeless to transition out of homelessness by covering their basic needs and giving them a reason to look forward to achieving the ultimate goal: permanent housing. When a person becomes homeless, it only takes 3 weeks of living on the streets to lose their sense of rational thinking and self-respect. Once someone is labeled “homeless,” they become invisible to society. Our intention is for the community to see, respect and assist the Homeless, helping build confidence and lift their spirits to encourage them to seek help in finding shelter, jobs, education, and mental health. Society is measured by how it treats the weak and vulnerable. We must give the Homeless access to opportunities. We must give the Homeless the right to choose the kind of services they receive. We succeed when we think and act collectively. No one rests until everyone has a home! We need your support and donations to make this happen.",
+  website: 'http://favelamiami.org'
+)
+
+org23 = Organization.create!(
+  name: "Miami Homes for All",
+  category: 'Housing & Affordability',
+  address: '140 W. Flagler Street, Suite 105, Miami, FL 33130',
+  description: "Miami Homes For All is dedicated to promoting community collaboration to prevent and end homelessness in South Florida. Through grant writing, advocacy, coordinating resources, and developing & supporting prevention initiatives on local, state and federal levels, we seek to eliminate experiences of homelessness for all.",
+  website: 'http://www.miamihomesforall.org'
+)
 p "created #{Organization.count} organizations!"
 
 

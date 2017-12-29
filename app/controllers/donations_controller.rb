@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
   def index
     if current_donor_login
       @donations = current_donor_login.donations
-      @donor = current_donor_login.first_name
+      @donor = current_donor_login
     else
       redirect_to donor_login_session_path, notice: "This isn't you."
     end

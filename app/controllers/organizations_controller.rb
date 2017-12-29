@@ -5,6 +5,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations.json
   def index
     @organizations = Organization.all
+    @organization = Organization.all.group_by(&:category)
   end
 
   # GET /organizations/1
