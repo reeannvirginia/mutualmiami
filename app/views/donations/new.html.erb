@@ -2,25 +2,26 @@
 
 <%= form_tag donations_path() do %>
 
-
-<div class="container">
-  <img src="/public/helphinghands.jpg" class="rounded float-left" alt="">
+<div class="donations_new">
 
 
-  <div class="card-header" style="width: 30rem;">
+  <div class="container">
+
+    <div class="card-header" style="width: 30rem;">
 
 
-  <div class="form-group">
+    <div class="form-group">
     <%= label_tag :amount %>
     <%= text_field_tag "donation[amount]" %>
-  </div>
+    </div>
 
-  <%= hidden_field_tag "donation[donor_login_id]", current_donor_login.id %>
+    <%= hidden_field_tag "donation[donor_login_id]", current_donor_login.id %>
 
-  <div class="form-group">
+    <div class="form-group">
     <%= label_tag "Select Fund" %>
     <%= select_tag "donation[fund_id]", options_from_collection_for_select(@funds, "id", "category") %>
-  </div>
+    </div>
+
 
 
   <article>
@@ -33,6 +34,7 @@
       <span> <%= pretty_amount(@amount) %></span>
     </label>
   </article>
+  
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -45,6 +47,7 @@
   </script>
 
   <% end %>
+
 
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
