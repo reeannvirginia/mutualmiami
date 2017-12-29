@@ -1,19 +1,14 @@
-</div>
-
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="registrations_new">
 
   <div class="container">
-    <h1>Sign up</h1>
+
+     <h1 style="color: #eee;">Sign up</h1>
 
   <div class="card-header" style="width: 30rem;">
 
-  <div class="field">
-    <%= f.file_field :avatar %>
-  </div>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -26,6 +21,7 @@
   </div>
 
   <div class="field">
+
   <div class="form-group">
 
     <%= f.label :email %><br />
@@ -48,7 +44,7 @@
   <div class="actions1">
     <%= f.submit "Sign up", class: 'btn btn-Light' %>
 
-  <%= render "devise/shared/links" %>
+  <!-- <%= render "devise/shared/links" %> -->
 
 <% end %>
 
