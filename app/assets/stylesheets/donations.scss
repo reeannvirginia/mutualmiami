@@ -1,4 +1,41 @@
+//
+// @media (min-width: 1200px)
+//   .user_profile {
+//   max-width: 2000px;
+// }
 
+.user_profile {
+  position: relative;
+  background-image: url('public/flowers.jpg');
+  background-size: cover;
+  padding-left: 0.6em;
+  &:before {
+    content: "";
+    background: white;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  img {
+    box-shadow: 4px 4px 4px #DEE0E2;
+
+  }
+
+}
+
+.col-sm-first {
+  padding: 2em;
+  z-index: 1;
+  width: 400px;
+}
+
+.col-sm-second {
+  z-index: 1;
+
+}
 .donations_new {
   background: url('public/helphinghands.jpg');
   background-size:  auto;

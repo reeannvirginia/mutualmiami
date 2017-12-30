@@ -10,9 +10,17 @@
   <div class="row">
     <div class="col">
         <h2>Organizations</h2>
-        <%= @organization %>
+        <% @organization_category.each do |category| %>
+        <div class="org-box">
+        <h3><%= category[0] %> </h3><br>
+        <p> <%= category[1]%><br>
+        <p> <%= category[1][2].name %></p><br>
+
+
+        <% end %>
             <% @organizations.each do |organization| %>
               <div class="org-box">
+                  <%= organization %>
                 <h3><%= organization.name %></h3>
                 <h5><%= organization.address %></h5>
                 <p><%= organization.description %><p>

@@ -1,54 +1,45 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-first">
-      <div class="user_profile">
+<div class="user_profile">
+<!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-sm-first">
 
         <%= image_tag current_donor_login.avatar.url(:medium) %>
         <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
         <p> <%= @donor.email %> <br>
-            <%= @donor.phone_number %>
+          <%= @donor.phone_number %>
+        <p> Skateboarder, coffee addict, audiophile, aspiring graphic designer </p>
+      </div>
+
+      <div class="col-sm second">
+        <h3> Total Donations: $<%=sprintf('%.2f', @donations.map(&:amount).inject(:+)) rescue '0'  %> </h3>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Donor</th>
+              <th>Category</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @donations.each do |donation| %>
+            <tr>
+              <td>$<%= sprintf('%.2f', donation.amount) %></td>
+              <td><%= donation.donor_login.first_name %></td>
+              <td><%= donation.fund.category %></td>
+              <td><%= link_to 'Show', donation %></td>
+              <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+              <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+
+        <%= link_to 'New Donation', new_donation_path %>
       </div>
     </div>
-
-
-    <div class="col-sm">
-      One of three columns
-    </div>
-
-
-    <div class="col-sm">
-      <h3> Total Donations: $<%=sprintf('%.2f', @donations.map(&:amount).inject(:+)) rescue '0'  %> </h3>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Amount</th>
-          <th>Donor</th>
-          <th>Category</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @donations.each do |donation| %>
-        <tr>
-          <td>$<%= sprintf('%.2f', donation.amount) %></td>
-          <td><%= donation.donor_login.first_name %></td>
-          <td><%= donation.fund.category %></td>
-          <td><%= link_to 'Show', donation %></td>
-          <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-          <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-
-
-
-    <br>
-
-    <%= link_to 'New Donation', new_donation_path %>
   </div>
-</div>
-</div>
