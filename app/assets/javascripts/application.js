@@ -13,3 +13,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require turbolinks
+//= require chart
+//= require chart2
+//= require nvd3
+//= require google
+//= require highcharts

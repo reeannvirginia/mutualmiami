@@ -5,9 +5,8 @@
 
         <%= image_tag current_donor_login.avatar.url(:medium) %>
         <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
-        <p> <%= @donor.email %> <br>
-          <%= @donor.phone_number %>
-        <p> Skateboarder, coffee addict, audiophile, aspiring graphic designer </p>
+        <p> Email: <%= @donor.email %></p> 
+        <p> Bio: Skateboarder, coffee addict, audiophile, aspiring graphic designer </p>
       </div>
 
       <div class="col-sm second">
