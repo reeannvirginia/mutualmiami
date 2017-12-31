@@ -1,76 +1,32 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <div class="header-img">
   <%= image_tag ("public/downtown-miami.jpg"), width: "100%", height: "700" %>
 </div>
 
-
-
 <div class="org-container">
   <div class="row">
     <div class="col">
-        <h2>Organizations</h2>
-        <% @organization_category.each do |category| %>
-        <div class="org-box">
-        <h3><%= category[0] %> </h3><br>
-        <p> <%= category[1]%><br>
-        <p> <%= category[1][2].name %></p><br>
-
-
-        <% end %>
-            <% @organizations.each do |organization| %>
-              <div class="org-box">
-                  <%= organization %>
-                <h3><%= organization.name %></h3>
-                <h5><%= organization.address %></h5>
-                <p><%= organization.description %><p>
-                <h5><%= organization.website %></h5>
-                <%# link_to 'Edit', edit_organization_path(organization) %>
-                <div class="z-btn2">
-                <%= link_to 'Info', organization %>
-                </div>
-                <div class="new-organization"><%# link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </div>
+      <center><strong><h1>Change for Miami Organizations</h1></strong></center>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <% @organization_category.each do |category| %>
+          <% arr = category[1]%>
+          <h3><%= category[0].upcase %> </h3>
+          <% arr.each do |organization| %>
+          <div class="org-box">
+            <h4><%= organization.name %></h4>
+            <h5><%= organization.address %></h5>
+            <p><%= organization.description %><p>
+            <h5><%= organization.website %></h5>
+            <div class="z-btn2">
+              <%= link_to 'Info', organization %>
             </div>
-            <% end %>
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col">
-      2 of 3
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-</div>
-
-
-<div class="org-container">
-  <h2>Organizations</h2>
-      <% @organizations.each do |organization| %>
-        <div class="org-box">
-          <h3><%= organization.name %></h3>
-          <h5><%= organization.address %></h5>
-          <p><%= organization.description %><p>
-          <h5><%= organization.website %></h5>
-          <%# link_to 'Edit', edit_organization_path(organization) %>
-          <div class="z-btn2">
-          <%= link_to 'Info', organization %>
           </div>
-          <div class="new-organization"><%# link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-      </div>
-      <% end %>
-  <br>
-
-  <div class="z-btn">
-  <%= link_to 'New Organization', new_organization_path %>
+          <% end %>
+        <% end %>
   </div>
 </div>
