@@ -21,7 +21,9 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'hirb'
 
-gem 'chart'
+gem 'chartkick'
+
+gem 'groupdate'
 
 gem 'paperclip'
 

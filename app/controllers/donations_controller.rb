@@ -11,6 +11,10 @@ class DonationsController < ApplicationController
     else
       redirect_to donor_login_session_path, notice: "This isn't you."
     end
+
+    respond_to  do |format|
+      format.html
+    end
   end
 
   # GET /donations/1
@@ -39,7 +43,7 @@ class DonationsController < ApplicationController
       stripe_token: params[:stripeToken])
 
       charge = StripeTool.create_charge(customer_id: customer.id,
-        amount: @amount,
+        amount: 500,
         description: "Donation totaling #{@donation.amount}")
 
         redirect_to donations_path(donation_id: @donation.id)
@@ -86,6 +90,11 @@ class DonationsController < ApplicationController
 
     def get_funds
       @funds = Fund.all
+    end
+
+    def amount
+      @donation = Donation.find(params[:id])
+      @amount = @donation.amount
     end
 
 

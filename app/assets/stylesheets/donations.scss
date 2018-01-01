@@ -1,9 +1,3 @@
-//
-// @media (min-width: 1200px)
-//   .user_profile {
-//   max-width: 2000px;
-// }
-
 .user_profile {
   position: relative;
   background-image: url('public/flowers.jpg');
@@ -51,3 +45,19 @@
     font-family: 'PT Sans Narrow', sans-serif;
 
   }
+
+.show {
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+.table {
+    z-index: 1;
+    // margin: 2em;
+}
+
+.btn-primary.disabled {
+  background-color: #b780a1;
+  border-color: #b780a1;
+  float: right;
+}
