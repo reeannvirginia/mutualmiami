@@ -5,8 +5,11 @@
 
         <%= image_tag current_donor_login.avatar.url(:medium) %>
         <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
-        <p> Email: <%= @donor.email %></p> 
+        <p> Email: <%= @donor.email %></p>
         <p> Bio: Skateboarder, coffee addict, audiophile, aspiring graphic designer </p>
+        <div class="btn-group">
+          <%= link_to 'Start New Donation', new_donation_path, class: "btn btn-primary" %>
+        </div>
       </div>
 
       <div class="col-sm second">
@@ -28,17 +31,11 @@
               <td>$<%= sprintf('%.2f', donation.amount) %></td>
               <td><%= donation.donor_login.first_name %></td>
               <td><%= donation.fund.category %></td>
-              <td><%= link_to 'Show', donation %></td>
-              <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-              <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'View Details', donation %></td>
             </tr>
             <% end %>
           </tbody>
         </table>
-
-        <br>
-
-        <%= link_to 'New Donation', new_donation_path %>
       </div>
     </div>
   </div>
