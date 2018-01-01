@@ -16,7 +16,8 @@
       <br>
       <br>
       <br>
-      <%= pie_chart @donations.group(:fund).count, label: "Category", colors: ["#9179c6", "#77afb7", "#b780a1"] %>
+      <!-- <%= pie_chart @donations.group(:fund).count, colors: ["#9179c6", "#77afb7", "#b780a1"] %> -->
+      <%= pie_chart({"Health/Human Services" => 4, "Education" => 3, "Animals" => 3}, colors: ["#9179c6", "#77afb7", "#b780a1"]) %>
       <br>
       <br>
       <button type="button" class="btn btn-primary disabled">
