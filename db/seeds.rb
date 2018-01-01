@@ -260,7 +260,7 @@ peter_segal =
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand(1..100)).round(2),
+    amount: (rand(1..10)).round(2),
     fund: fund,
     donor_login: samantha_peanuts,
   )
@@ -269,7 +269,7 @@ end
 10.times do
   fund = Fund.all.sample
   donation = Donation.create!(
-    amount: (rand(1..100)).round(2),
+    amount: (rand(1..10)).round(2),
     fund: fund,
     donor_login: peter_segal,
   )
