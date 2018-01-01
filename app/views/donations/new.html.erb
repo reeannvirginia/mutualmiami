@@ -24,6 +24,7 @@
 
 
 
+
   <article>
     <% if flash[:error].present? %>
     <div id="error_explanation">
@@ -34,7 +35,7 @@
       <span> <%= pretty_amount(@amount) %></span>
     </label>
   </article>
-  
+
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -47,6 +48,7 @@
   </script>
 
   <% end %>
+
 
 
   <script src="https://checkout.stripe.com/checkout.js"></script>
