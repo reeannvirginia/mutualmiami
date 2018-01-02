@@ -6,7 +6,7 @@
       <%= image_tag current_donor_login.avatar.url(:medium) %>
       <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
       <p> Email: <%= @donor.email %></p>
-      <p> Bio: Skateboarder, coffee addict, audiophile, aspiring graphic designer </p>
+      <p> Bio: <strong>3-0-5 till I die </strong><br> coffee addict, aspiring software engineer </p>
       <div class="btn-group">
         <%= link_to 'Start New Donation', new_donation_path, class: "btn btn-primary" %>
       </div>

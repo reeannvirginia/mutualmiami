@@ -245,15 +245,15 @@ samantha_peanuts =
 
 peter_segal =
     DonorLogin.find_by(
-      first_name: "Peter",
-      last_name: "Segal",
-      email: "peter@segal.com"
+      first_name: "Bobby",
+      last_name: "Tables",
+      email: "bobby@tables.com"
       ) ||
   DonorLogin.create!(
-    first_name: "Peter",
-    last_name: "Segal",
-    avatar: File.open("#{Rails.root}/public/images/peter_segal.jpg"),
-    email: "peter@segal.com",
+    first_name: "Bobby",
+    last_name: "Tables",
+    avatar: File.open("#{Rails.root}/public/images/bobby_tables.png"),
+    email: "bobby@tables.com",
     password: 'PASSWORD',
   )
 
