@@ -25,9 +25,8 @@
       <ul>
   	 	 <li><%= link_to 'About' %></li>
        <li><%= link_to 'Organizations', organizations_path  %></li>
-       <li><%= link_to 'Funds', funds_path %></li>
        <% if donor_login_signed_in? %>
-           <li><%= link_to 'User Profile', donations_path %></li>
+           <li><%= link_to 'Dashboard', donations_path %></li>
            <li><%= link_to 'Account Settings', edit_donor_login_registration_path %></li>
            <li><%= link_to 'Sign Out', destroy_donor_login_session_path, :method => :delete %></li>
        <% else %>

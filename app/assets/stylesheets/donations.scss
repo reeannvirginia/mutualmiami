@@ -37,7 +37,7 @@
 
 .col-sm-second {
   z-index: 1;
-  width: 1000px;
+  width: 900px;
   text-align: center;
 }
 
@@ -75,5 +75,5 @@
 .btn-primary.disabled {
   background-color: #b780a1;
   border-color: #b780a1;
-  margin-right: 2em;
+  float: right;
 }
