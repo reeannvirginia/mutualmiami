@@ -18,6 +18,14 @@
 
   }
 
+
+.don-container {
+  margin: 0 3%;
+}
+
+.row {
+  display: flex;
+  /*justify-content: space-around;*/
 }
 
 .col-sm-first {
@@ -28,8 +36,14 @@
 
 .col-sm-second {
   z-index: 1;
-
+  width: 900px;
+  text-align: center;
 }
+
+/*.charterjs-size-monitor {
+  width: 50% !important;
+}*/
+
 
 .donations_new {
   background:url('public/ldb-march-start-investing-500-01.jpg') no-repeat;
@@ -48,10 +62,10 @@
 
   }
 
-.show {
+/*.show {
   padding: 1em;
   font-size: 1.3em;
-}
+}*/
 
 .table {
     z-index: 1;
@@ -62,5 +76,4 @@
   background-color: #b780a1;
   border-color: #b780a1;
   float: right;
-  margin-right: 2em;
 }

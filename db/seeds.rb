@@ -252,7 +252,7 @@ peter_segal =
   DonorLogin.create!(
     first_name: "Bobby",
     last_name: "Tables",
-    avatar: File.open("#{Rails.root}/public/images/bobby_tables.jpg"),
+    avatar: File.open("#{Rails.root}/public/images/bobby_tables.png"),
     email: "bobby@tables.com",
     password: 'PASSWORD',
   )
