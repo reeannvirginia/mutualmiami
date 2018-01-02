@@ -30,13 +30,14 @@
   z-index: 1;
 
 }
-.donations_new {
 
-  // background: url(');
-  // background-size:  300px 200px;
-  // background-position: bottom 0.5px left 30px;
-  // background-repeat: no-repeat;
-  // }
+.donations_new {
+  background:url('public/ldb-march-start-investing-500-01.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
   h2 {
     font-family: 'PT Sans Narrow', sans-serif;
