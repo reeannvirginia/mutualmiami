@@ -20,6 +20,15 @@
 
 }
 
+.don-container {
+  margin: 0 3%;
+}
+
+.row {
+  display: flex;
+  /*justify-content: space-around;*/
+}
+
 .col-sm-first {
   padding: 2em;
   z-index: 1;
@@ -28,8 +37,14 @@
 
 .col-sm-second {
   z-index: 1;
-
+  width: 1000px;
+  text-align: center;
 }
+
+/*.charterjs-size-monitor {
+  width: 50% !important;
+}*/
+
 .donations_new {
 
   background: url('public/helphinghands.jpg');
@@ -60,6 +75,5 @@
 .btn-primary.disabled {
   background-color: #b780a1;
   border-color: #b780a1;
-  float: right;
   margin-right: 2em;
 }
