@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'thanks', to: 'charges#thanks', as: 'thanks'
 
- root to: 'funds#index'
+  root to: 'funds#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

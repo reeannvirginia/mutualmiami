@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 	<div class="funds-text">
 		<div class="new-fund-form">
 			<p>
@@ -7,14 +6,12 @@
 			  <strong>Organizations:</strong> <br>
 			  <% @fund.organizations.each do |organization| %>
 			    <%= organization.name %>
-			      <%= link_to 'Learn more', organization %> <br>
+					<%= link_to 'Learn more', @fund %> <br>
 			  <% end %>
 			</p> <br>
 		 <div class="donation btn">
 		  <%= link_to 'Donate to fund', new_donation_path, class: 'btn btn-primary' %>
 		</div>
-	</div>
-	<div class="z-btn">
-		<%= link_to 'Back', funds_path %>
+			<%= link_to 'Back', funds_path %>
 	</div>
 </div>

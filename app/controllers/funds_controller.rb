@@ -11,6 +11,7 @@ class FundsController < ApplicationController
   # GET /funds/1
   # GET /funds/1.json
   def show
+    @organization = @fund.organizations
     @organization_fund = @fund.organization_funds
   end
 
@@ -29,6 +30,12 @@ class FundsController < ApplicationController
   # POST /funds.json
   def create
     @fund = Fund.new(fund_params)
+    i = 1
+    while i < params[:organizations][:id].length
+      @fund.organizations << Organization.find(params[:organizations][:id][i])
+      i += 1
+    end
+
 
     respond_to do |format|
       if @fund.save

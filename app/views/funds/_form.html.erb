@@ -1,5 +1,6 @@
 
 <div class="new-fund-form">
+  	<h1>Create New Fund</h1>
 <%= form_with(model: fund, local: true) do |form| %>
   <% if fund.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +15,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :category %>
+    <%= form.label :category %> <br>
     <%= form.text_field :category, id: :fund_category %>
   </div>
 
@@ -25,6 +26,8 @@
 
   <div class="actions">
     <%= form.submit %>
+    <%= link_to 'Back', donations_path %>
   </div>
 <% end %>
+
 </div>
