@@ -40,7 +40,7 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-description="<%= @description %>"
-    data-amount= "<%= @amount %>"
+    data-amount= "450"
     data-email="<%= current_donor_login.email %>"
     data-bitcoin="true"
     data-locale="auto">
