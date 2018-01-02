@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Change for Miami🌱</title>
+    <title>Mutual Miami🌱</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather+Sans|PT+Sans|PT+Sans+Narrow" rel="stylesheet">
@@ -19,7 +19,7 @@
   <header class="header">
 
   	<div class="home-btn">
-  		<h1><%= link_to 'Change for Miami🌱', root_url %></h1>
+  		<h1><%= link_to 'Mutual Miami🌱', root_url %></h1>
   	</div>
   	<div class="nav">
       <ul>
@@ -27,7 +27,7 @@
        <li><%= link_to 'Organizations', organizations_path  %></li>
        <li><%= link_to 'Funds', funds_path %></li>
        <% if donor_login_signed_in? %>
-           <li><%= link_to 'Home', donations_path %></li>
+           <li><%= link_to 'User Profile', donations_path %></li>
            <li><%= link_to 'Account Settings', edit_donor_login_registration_path %></li>
            <li><%= link_to 'Sign Out', destroy_donor_login_session_path, :method => :delete %></li>
        <% else %>
@@ -49,7 +49,7 @@
   </div>
     <footer>
     	<div class="footer-info">
-    		<p>Change for Miami<br>Courtesy of students of Wyncode Academy</p>
+    		<p>Mutual Miami🌱<br>Courtesy of students of Wyncode Academy</p>
     	</div>
     </footer>
 

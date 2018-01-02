@@ -5,7 +5,7 @@
   <div class="z-card">
     <div class="z-side">
      <h4><%= fund.category %></h4>
-          <%# link_to 'Learn more', fund %>
+          <% link_to 'Learn more', fund %>
      <%# link_to 'Destroy', fund,
      method: :delete, data:
      { confirm: 'Are you sure?' } %>
@@ -19,7 +19,8 @@
       </div>
       <div class="org-names">
       <% fund.organizations.each do |organization| %>
-        <%= organization.name %> <br>
+        <%= link_to organization.name, organization %> <br>
+
       <% end %>
       </div>
    </div>

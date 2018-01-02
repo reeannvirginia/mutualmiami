@@ -1,54 +1,56 @@
 <div class="user_profile">
-  <!-- <div class="container"> -->
-  <div class="row">
-    <div class="col-sm-first">
+  <div class="don-container">  
+    <!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-sm-first">
 
-      <%= image_tag current_donor_login.avatar.url(:medium) %>
-      <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
-      <p> Email: <%= @donor.email %></p>
-      <p> Bio: <strong>3-0-5 till I die </strong><br> coffee addict, aspiring software engineer </p>
-      <div class="btn-group">
-        <%= link_to 'Start New Donation', new_donation_path, class: "btn btn-primary" %>
+        <%= image_tag current_donor_login.avatar.url(:medium) %>
+        <h2><%= @donor.first_name + " " + @donor.last_name %> </h2>
+        <p> Email: <%= @donor.email %></p>
+        <p> Bio: <strong>3-0-5 till I die </strong><br> coffee addict, aspiring software engineer </p>
+        <div class="btn-group">
+          <%= link_to 'Start New Donation', new_donation_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+
+      <div class="col-sm-second">
+        <br>
+        <br>
+        <br>
+        <%= pie_chart @donations.group(:fund).count, colors: ["#9179c6", "#77afb7", "#b780a1"] %>
+
+        <!-- <%= pie_chart({"Health/Human Services" => 4, "Education" => 3, "Animals" => 3}, colors: ["#9179c6", "#77afb7", "#b780a1"]) %> -->
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary disabled">
+          <h3> Total Donations: $<%=sprintf('%.2f', @donations.map(&:amount).inject(:+)) rescue '0'  %> </h3>
+        </button>
       </div>
     </div>
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Amount</th>
+            <th>Donor</th>
+            <th>Category</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-    <div class="col-sm second">
-      <br>
-      <br>
-      <br>
-      <%= pie_chart @donations.group(:fund).count, colors: ["#9179c6", "#77afb7", "#b780a1"] %>
-
-      <!-- <%= pie_chart({"Health/Human Services" => 4, "Education" => 3, "Animals" => 3}, colors: ["#9179c6", "#77afb7", "#b780a1"]) %> -->
-      <br>
-      <br>
-      <button type="button" class="btn btn-primary disabled">
-        <h3> Total Donations: $<%=sprintf('%.2f', @donations.map(&:amount).inject(:+)) rescue '0'  %> </h3>
-      </button>
+        <tbody>
+          <% @donations.each do |donation| %>
+          <tr>
+            <td></td>
+            <td>$<%= sprintf('%.2f', donation.amount) %></td>
+            <td><%= donation.donor_login.first_name %></td>
+            <td><%= donation.fund.category %></td>
+            <td><%= link_to 'View Details', donation %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
-  </div>
-  <div class="row">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Amount</th>
-          <th>Donor</th>
-          <th>Category</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @donations.each do |donation| %>
-        <tr>
-          <td></td>
-          <td>$<%= sprintf('%.2f', donation.amount) %></td>
-          <td><%= donation.donor_login.first_name %></td>
-          <td><%= donation.fund.category %></td>
-          <td><%= link_to 'View Details', donation %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
   </div>
 </div>
