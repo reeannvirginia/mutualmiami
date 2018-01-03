@@ -15,7 +15,7 @@
     <div class="col">
       <% @organization_category.each do |category| %>
           <% arr = category[1]%>
-          <h3><%= category[0].upcase %> </h3>
+          <h1><%= category[0].upcase %> </h1>
           <% arr.each do |organization| %>
           <div class="org-box">
             <h4><%= organization.name %></h4>
