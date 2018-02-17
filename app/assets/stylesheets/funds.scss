@@ -2,13 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.funds_new {
-  background:url('public/ldb-march-start-investing-500-01.jpg') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
+
 
 .main-holder {
   width: 100%;
@@ -19,9 +13,16 @@
   /*display: flex;*/
   text-align: center;
   /*position: relative;*/
-
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
+
+.funds_new {
+  background:url('public/ldb-march-start-investing-500-01.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
 .main-holder-text {
   /*margin: 20px;*/
@@ -120,6 +121,7 @@
 .z-card:hover {
   transform: rotateY(180deg);
 }
+
 .z-card .z-side {
   backface-visibility: hidden;
   background-image: linear-gradient(to right bottom, rgba(193, 247, 220, 0.9), rgba(121, 224, 172, 0.9));
@@ -130,12 +132,12 @@
   width: 100%;
   box-shadow: 1px 2px 4px 0px #888888;
   text-align: center;
+}
 
   h4 {
     padding: 125px 0;
     color: #515350;
   }
-}
 
 .z-card .back {
   background: #eaeaed;
@@ -171,7 +173,6 @@
   transform: translateY(4px);
 
   }
-}
 
 .org-names a {
   text-decoration: none;
@@ -186,12 +187,13 @@
   padding: 50px 20px;
   margin: 75px;
   /*line-height: 400%;*/
+}
 
   .field {
     padding: 20px 0;
   }
-}
 
 .donation .btn {
   float: right;
+}
 }
