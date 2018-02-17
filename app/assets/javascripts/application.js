@@ -12,6 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require Chart.bundle
 //= require chartkick
+//= require Chart.bundle
 //= require_tree .
